@@ -8,6 +8,58 @@ The core design philosophy centers on "risk interpretation, not prescription" - 
 
 ## Architecture
 
+### Technology Stack
+
+**Backend Services:**
+- **Runtime**: Python 3.11+ (for AI/ML capabilities and scientific computing)
+- **Web Framework**: FastAPI (for high-performance async APIs)
+- **AI/ML Stack**: 
+  - Scikit-learn (for traditional ML models)
+  - PyTorch (for deep learning models)
+  - Pandas/NumPy (for data processing)
+  - Hypothesis (for property-based testing)
+- **Database**: 
+  - PostgreSQL (for structured farm and user data)
+  - Redis (for caching and session management)
+  - InfluxDB (for time-series weather and sensor data)
+
+**Mobile Application:**
+- **Framework**: React Native (cross-platform iOS/Android support)
+- **State Management**: Redux Toolkit
+- **Offline Storage**: SQLite with Redux Persist
+- **Voice Interface**: React Native Voice (with local language support)
+
+**Infrastructure:**
+- **Containerization**: Docker + Docker Compose
+- **Orchestration**: Kubernetes (for scalable deployment)
+- **API Gateway**: Kong or Traefik
+- **Message Queue**: Redis/Celery (for async processing)
+- **Monitoring**: Prometheus + Grafana
+- **Logging**: ELK Stack (Elasticsearch, Logstash, Kibana)
+
+**Data & Privacy:**
+- **Data Pipeline**: Apache Airflow (for ETL processes)
+- **Privacy Layer**: Custom Python middleware with differential privacy
+- **Encryption**: AES-256 for data at rest, TLS 1.3 for data in transit
+- **Anonymization**: k-anonymity and l-diversity algorithms
+
+**External Integrations:**
+- **Weather APIs**: OpenWeatherMap, India Meteorological Department APIs
+- **Market Data**: AGMARKNET APIs, commodity exchange feeds
+- **Government Schemes**: Digital India APIs (where available)
+
+**Development & Testing:**
+- **Testing**: pytest (unit tests), Hypothesis (property-based testing)
+- **Code Quality**: Black (formatting), pylint (linting), mypy (type checking)
+- **CI/CD**: GitHub Actions or GitLab CI
+- **Documentation**: Sphinx (API docs), MkDocs (user documentation)
+
+**Deployment Considerations:**
+- **Cloud**: Multi-cloud support (AWS, Azure, Google Cloud)
+- **Edge Computing**: Lightweight models for offline processing
+- **CDN**: CloudFlare for static content and API acceleration
+- **Backup**: Automated daily backups with point-in-time recovery
+
 ### High-Level Architecture
 
 ```mermaid
